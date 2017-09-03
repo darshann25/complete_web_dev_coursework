@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+
+      var tweets = ["Hi everyone!", "I love cornflakes!", "TRUMP SUCKS!", "Night night!"];
+
+      for ( var i = 0; i < tweets.length; i++ ) {
+        var para = document.createElement("p");
+        para.appendChild(document.createTextNode("Tweet " + (i + 1) + " : " + tweets[i]));
+        document.body.appendChild(para);
+      }
+
+    </script>
+
+
+  </body>
+</html>

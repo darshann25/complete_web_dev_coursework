@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game</title>
+  </head>
+
+  <body>
+
+    <p>How many fingers am I holding up?</p>
+
+    <input type="text" id="fingersInput">
+
+    <button id="guessButton">Guess!</button>
+
+    <script type="text/javascript">
+
+      var randomNum, guessNum;
+
+      document.getElementById("guessButton").onclick = function() {
+        randomNum = Math.floor(Math.random() * 5);
+
+        guessNum = document.getElementById("fingersInput").value;
+
+        if (guessNum == randomNum) {
+          alert("Yes! You guessed it right.");
+        } else {
+          alert("Nope! The number was " + randomNum.toString());
+        }
+      }
+
+    </script>
+
+
+  </body>
+</html>

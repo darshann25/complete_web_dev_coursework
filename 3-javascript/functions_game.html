@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+
+
+    <p>How many fingers are you holding up?</p>
+
+    <p>
+      <select id="fingersInput">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+
+    <button id="guessButton">Guess!</button></p>
+
+    <script type="text/javascript">
+
+      function guessNumber(inputNum) {
+        var randomNum = Math.floor(Math.random() * 6);
+
+        if( inputNum == randomNum ){
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      document.getElementById("guessButton").onclick = function() {
+
+        var inputNum = document.getElementById("fingersInput").value;
+        var gotIt = false;
+        var numGuesses = 0;
+
+        if ( inputNum >= 6 ) {
+          alert("Please enter a number in the range 0 - 5.");
+          return
+        }
+
+        while (!gotIt) {
+
+          gotIt = guessNumber(inputNum);
+          numGuesses++;
+
+          if (gotIt) {
+            alert("Got It! The number is " + inputNum + "! It took " + numGuesses + " guesses.");
+          }
+        }
+
+      }
+
+
+
+
+
+
+    </script>
+
+
+  </body>
+</html>

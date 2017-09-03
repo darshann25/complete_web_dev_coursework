@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript</title>
+  </head>
+  <body>
+
+    <p id="info">What is the Magic Input?</p>
+
+    <input type="text" id="magicInput">
+
+    <button id="magicButton">Turn In</button>
+
+    <script type="text/javascript">
+
+      var magicInput = "";
+
+      document.getElementById("magicButton").onclick = function() {
+        magicInput = document.getElementById("magicInput").value
+
+        if (magicInput == "Abracadabra") {
+          alert("BRAVO! The Cave just opened.");
+        } else {
+          alert("Tough Luck!")
+        }
+
+      }
+
+
+    </script>
+
+  </body>
+</html>
